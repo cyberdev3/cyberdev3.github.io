@@ -1,4 +1,8 @@
 Ru
-description: Я Юнити разработчик. Создаю игры на движке Юнити. Мой опыт в разработке игр состаляет 5 лет. Опыт в программировании: больше 15 лет. На данном сайте-подтфолио вы можете ознакомиться с моими работами, связаться со мой или, сделать заказ на разработку игры, написание кода или, изменение/доработку вашей игры.
+description: Сайт-портфолио разработчика игр на движке Unity. 
+uthor
+    description: Я Unity разработчик. Создаю игры на движке Unity. Мой опыт в разработке игр состаляет 5 лет. Опыт в программировании: больше 15 лет. На данном сайте-подтфолио вы можете ознакомиться с моими работами, связаться со мой или, сделать заказ на разработку игры, написание кода или, изменение/доработку вашей игры.
 En
-description: I am a Unity developer. I create games on the Unity engine. My experience in game development is 5 years. Experience in programming: more than 15 years. On this subfolio site you can see my works, contact me or, make an order for game development, writing code or changing/improving your game.
+description: Portfolio site of Unity game developer
+author
+    description: I am a Unity developer. I create games on the Unity engine. My experience in game development is 5 years. Experience in programming: more than 15 years. On this subfolio site you can see my works, contact me or, make an order for game development, writing code or changing/improving your game.
