@@ -1,5 +1,6 @@
-{% assign author = page.author | default: page.authors[0] | default: site.author %}
-{% assign author = site.data.authors[author] | default: author %}
+{% assign locale = site.active_lang | default: 'en' %}
+{% assign main_text = site.data.main-text[locale] %}
+{% assign author = main_text.author | default: page.authors[0] | default: site.author %}
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
