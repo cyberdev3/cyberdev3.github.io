@@ -1,6 +1,6 @@
 # -----------------
 en: &DEFAULT_EN
-  site
+  site:
     title                    : "Unity Developer Portfolio"
     name                     : "Cyberdev"
     description              : "Portfolio site of Unity game developer"
@@ -18,7 +18,7 @@ en-AU:
 
 # -----------------
 uk: &DEFAULT_UK
-  site
+  site:
     title                    : "Сайт-портфоліо Unity розробника"
     name                     : "Cyberdev"
     description              : "Сайт-портфоліо розробника игор на ігровому рушії Unity"
@@ -31,7 +31,7 @@ uk-UA:
 
 # -----------------
 ru: &DEFAULT_RU
-  site
+  site:
     title                    : "Сайт-портфолио Unity разработчика"
     name                     : "Cyberdev"
     description              : "Сайт-портфолио разработчика игр на игровом движке Unity"
