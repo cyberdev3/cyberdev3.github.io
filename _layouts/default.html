@@ -10,7 +10,8 @@
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
-    {% include_cached skip-links.html %}
+    <p>default.html pade.locale: {{pade.locale}}</p>
+    {% include skip-links.html %}
     {% include masthead.html %}
 
     <div class="initial-content">
