@@ -12,6 +12,12 @@
           {{ site.data.main-text[current_locale].site.title | site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
+        <!-- Language Switcher -->
+        <nav class="language-switcher">
+          <a href="/">EN</a>
+          <a href="/uk/">UA</a>
+          <a href="/ru/">RU</a>
+        </nav>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
