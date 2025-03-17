@@ -9,6 +9,7 @@
           <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
+          current_locale: {{ current_locale}}
           {{ site.data.main-text[current_locale].site.title | site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
