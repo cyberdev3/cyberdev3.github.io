@@ -4,6 +4,7 @@ en: &DEFAULT_EN
     title                    : "Unity Developer Portfolio"
     name                     : "Cyberdev"
     description              : "Portfolio site of Unity game developer"
+    copyright                : "Mihail Matkovskij © Cyberdev"
   author:
     name             : "Mihail Matkovskij © Cyberdev"
     bio              : "I am a Unity developer. I create games on the Unity engine. My experience in game development is 5 years. Experience in programming: more than 15 years. On this subfolio site you can see my works, contact me or, make an order for game development, writing code or changing/improving your game."
@@ -22,6 +23,7 @@ uk: &DEFAULT_UK
     title                    : "Сайт-портфоліо Unity розробника"
     name                     : "Cyberdev"
     description              : "Сайт-портфоліо розробника игор на ігровому рушії Unity"
+    copyright                : "Михайло Матковський © Cyberdev"
   author:
     name             : "Михайло Матковський © Cyberdev"
     bio              : "Я Unity розробник. Створюю ігры на ігровому рушії Unity. Мій досвід в розробці ігор складає 5 років. Досвід в програмуванні: більше 15 років. На даному сйті-портфоліо ви можете ознайомитись з моїми роботами, зв'язатися зі мною або, зробити замовлення на розробку гри, написання коду або, зміну/вдосконалення вашої гри."
@@ -35,6 +37,7 @@ ru: &DEFAULT_RU
     title                    : "Сайт-портфолио Unity разработчика"
     name                     : "Cyberdev"
     description              : "Сайт-портфолио разработчика игр на игровом движке Unity"
+    copyright                : "Михаил Матковский © Cyberdev"
   author:
     name             : "Михаил Матковский © Cyberdev"
     bio              : "Я Unity разработчик. Создаю игры на игровом движке Unity. Мой опыт в разработке игр состаляет 5 лет. Опыт в программировании: больше 15 лет. На данном сайте-портфолио вы можете ознакомиться с моими работами, связаться со мой или, сделать заказ на разработку игры, написание кода или, изменение/доработку вашей игры."
