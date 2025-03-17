@@ -330,3 +330,6 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+after_footer_scripts:
+  - /assets/js/lang-switcher.js

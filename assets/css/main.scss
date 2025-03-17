@@ -7,3 +7,74 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* === Language Switcher >> === */
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 80px;
+  font-weight: bold;
+}
+
+.lang-button .lang-label {
+  margin-right: 0.5rem;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #333;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0.25rem;
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.lang-menu li {
+  list-style: none;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.lang-option:hover {
+  background-color: #f7f7f7;
+}
+
+.lang-option .icon-check {
+  opacity: 0;
+}
+
+.lang-option.selected .icon-check {
+  opacity: 1;
+}
+
+/* === Language Switcher << === */
