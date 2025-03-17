@@ -1,3 +1,4 @@
+console.log('lang-switcher connected');
 const langButton = document.querySelector('.lang-button');
 const langMenu = document.querySelector('.lang-menu');
 
