@@ -1,54 +1,51 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const switcher = document.querySelector('.lang-switcher');
-  const button = switcher.querySelector('.lang-button');
-  const menu = switcher.querySelector('.lang-menu');
-  const label = button.querySelector('.lang-label');
-  const items = menu.querySelectorAll('li');
+  console.log('lang-switcher connected');
 
-  // Відкриття/закриття меню
-  button.addEventListener('click', function() {
-    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', !isExpanded);
-    menu.hidden = isExpanded;
+  const langButton = document.querySelector('.lang-button');
+  const langMenu = document.querySelector('.lang-menu');
+  const langItems = document.querySelectorAll('.lang-menu li a');
+  const langLabel = langButton.querySelector('.lang-label');
+
+  // --- Ініціалізація тексту на кнопці ---
+  const path = window.location.pathname;
+
+  if (path.startsWith('/uk/')) {
+    langLabel.textContent = 'UA';
+  } else if (path.startsWith('/ru/')) {
+    langLabel.textContent = 'RU';
+  } else {
+    langLabel.textContent = 'EN';
+  }
+
+  // --- Клік по кнопці ---
+  langButton.addEventListener('click', function(e) {
+    e.stopPropagation(); // Щоб клік не пішов далі на document
+    const expanded = langButton.getAttribute('aria-expanded') === 'true';
+    langButton.setAttribute('aria-expanded', !expanded);
+    langMenu.style.display = expanded ? 'none' : 'block';
   });
 
-  // Клік по пункту меню
-  items.forEach(item => {
-    item.addEventListener('click', function() {
-      const lang = item.getAttribute('data-lang');
-      label.textContent = lang.toUpperCase();
+  // --- Клік поза меню (закриває меню) ---
+  document.addEventListener('click', function(event) {
+    if (!langButton.contains(event.target) && !langMenu.contains(event.target)) {
+      langButton.setAttribute('aria-expanded', false);
+      langMenu.style.display = 'none';
+    }
+  });
 
-      // Прибираємо старі виділення
-      items.forEach(i => i.classList.remove('selected'));
-      item.classList.add('selected');
+  // --- Клік по елементу списку мов ---
+  langItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
 
-      // Приховуємо меню
-      button.setAttribute('aria-expanded', false);
-      menu.hidden = true;
+      const selectedLang = item.textContent.trim();
+      langLabel.textContent = selectedLang;
 
-      // Перенаправлення на потрібну локаль (за потреби)
-      const currentUrl = window.location.href;
-      // Тут зроби свою логіку або посилання
-      const newUrl = `/${lang}/`; // заміни на реальні урли
-      window.location.href = newUrl;
+      langButton.setAttribute('aria-expanded', false);
+      langMenu.style.display = 'none';
+
+      // Перенаправлення на вибрану мову
+      window.location.href = item.getAttribute('href');
     });
-  });
-
-  // Закриття меню при кліку поза елементом
-  document.addEventListener('click', function(e) {
-    if (!switcher.contains(e.target)) {
-      button.setAttribute('aria-expanded', false);
-      menu.hidden = true;
-    }
-  });
-
-  // Ініціалізація активної локалі
-  const currentLang = document.documentElement.lang || 'en';
-  label.textContent = currentLang.toUpperCase();
-  items.forEach(item => {
-    const lang = item.getAttribute('data-lang');
-    if (lang === currentLang) {
-      item.classList.add('selected');
-    }
   });
 });
