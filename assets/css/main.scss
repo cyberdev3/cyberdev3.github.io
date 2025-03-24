@@ -29,6 +29,11 @@ search: false
   color: inherit;
 }
 
+.lang-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .lang-button .lang-label {
   margin-right: 0.5rem;
 }
