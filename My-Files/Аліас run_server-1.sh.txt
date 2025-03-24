@@ -1,0 +1,4 @@
+# Додати аліас з командами в файлі run_server-1.sh до терміналу
+alias jekyllrun='bash /media/sf_Portfolio/cyberdev3/My-Files/run_server-1.sh'
+# Запустити аліас в терміналі і, якщо проект знаходиться за вказаним шляхом в командах файлу run_server-1.sh, автоматично підготується і запуститься сайт
+jekyllrun
