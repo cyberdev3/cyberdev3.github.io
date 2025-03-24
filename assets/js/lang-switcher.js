@@ -6,16 +6,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const langItems = document.querySelectorAll('.lang-menu li a');
   const langLabel = langButton.querySelector('.lang-label');
 
-  // --- Ініціалізація тексту на кнопці ---
   const path = window.location.pathname;
 
+  // --- Ініціалізація тексту на кнопці ---
+  let currentLang = 'EN'; // За замовчуванням
+
   if (path.startsWith('/uk/')) {
-    langLabel.textContent = 'UA';
+    currentLang = 'UA';
   } else if (path.startsWith('/ru/')) {
-    langLabel.textContent = 'RU';
-  } else {
-    langLabel.textContent = 'EN';
+    currentLang = 'RU';
   }
+
+  langLabel.textContent = currentLang;
+
+  // --- Проставлення галочки для поточної мови ---
+  langItems.forEach(function(item) {
+    const langName = item.querySelector('.lang-name').textContent.trim();
+
+    if (langName === currentLang) {
+      item.classList.add('selected');
+    } else {
+      item.classList.remove('selected');
+    }
+  });
 
   // --- Клік по кнопці ---
   langButton.addEventListener('click', function(e) {
@@ -38,8 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', function(e) {
       e.preventDefault();
 
-      const selectedLang = item.textContent.trim();
+      const selectedLang = item.querySelector('.lang-name').textContent.trim();
       langLabel.textContent = selectedLang;
+
+      // Знімаємо selected з усіх і ставимо на поточний
+      langItems.forEach(function(el) {
+        el.classList.remove('selected');
+      });
+      item.classList.add('selected');
 
       langButton.setAttribute('aria-expanded', false);
       langMenu.style.display = 'none';
