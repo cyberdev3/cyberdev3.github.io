@@ -7,7 +7,7 @@ en: &DEFAULT_EN
     copyright                : "Mihail Matkovskij © Cyberdev"
   author:
     name             : "Mihail Matkovskij © Cyberdev"
-    bio              : "I am a Unity developer. I create games on the Unity engine. My experience in game development is 5 years. Experience in programming: more than 15 years. On this subfolio site you can see my works, contact me or, make an order for game development, writing code or changing/improving your game."
+    bio              : "I am a Unity developer. I create games on the Unity engine. My experience in game development is 5 years. Experience in programming: more than 15 years. On this portfolio site you can see my works, contact me or, make an order for game development, writing code or changing/improving your game."
 en-US:
   <<: *DEFAULT_EN
 en-CA:
